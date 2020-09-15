@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "forceConsistentCasingInFileNames": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "declaration": true,
+      "sourceMap": true,
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "outDir": "lib",
+      "inlineSources": false,
+      "strictNullChecks": false,
+      "noUnusedLocals": false,
+      "typeRoots": [
+        "./node_modules/@types"
+      ],
+      "types": [
+        "es6-promise"
+      ],
+      "lib": [
+        "es5",
+        "dom",
+        "es2015.collection"
+      ],
+      "esModuleInterop": true,
+      "noImplicitAny": false
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules",
+      "lib"
+    ]
+  }

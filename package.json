@@ -1,0 +1,28 @@
+{
+  "name": "react-reusable-components",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "watch": "tsc --watch",
+    "lint": "eslint --ext .ts,.tsx ./src --color --fix"
+  },
+  "dependencies": {
+    "office-ui-fabric-react": "6.214.0",
+    "react": "16.8.5",
+    "react-dom": "16.8.5"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "0.0.33",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.3",
+    "@typescript-eslint/eslint-plugin": "2.30.0",
+    "@typescript-eslint/parser": "2.30.0",
+    "eslint": "6.8.0",
+    "eslint-plugin-react": "7.19.0",
+    "typescript": "~3.7.x"
+  }
+}
