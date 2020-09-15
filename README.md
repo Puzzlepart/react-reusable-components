@@ -6,7 +6,7 @@ Dialog used to confirm actions. Also contains React hook `useConfirmationDialog`
 
 ### Using the hook
 
-```typescript
+```JSX
 const [dialog, getResponse] = useConfirmationDialog()
 
 async function deleteItem() {
@@ -18,9 +18,9 @@ async function deleteItem() {
 
 return (
     <div>
-  			<item>
+  			<div>
   				<button text="Delete" onClick={deleteItem} />
-  			</item>
+  			</div>
         {dialog}
     </div>
 )
