@@ -1,17 +1,26 @@
 # React Reusable Components
 
-## ConfirmDialog
+## Installation
+
+```shell
+npm install pzl-react-reusable-components
+```
+
+## Components
+
+### ConfirmDialog
 
 Dialog used to confirm actions. Also contains React hook `useConfirmationDialog`.
 
-### Import
+#### Import
+
 Import in the following way:
 
 ```typescript
 import { useConfirmationDialog } from 'react-reusable-components/lib/ConfirmDialog'
 ```
 
-### Using the hook
+#### Using the hook
 
 ```JSX
 const [dialog, getResponse] = useConfirmationDialog()
