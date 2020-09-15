@@ -18,10 +18,10 @@ async function deleteItem() {
 
 return (
     <div>
-  			<div>
-  				<button text="Delete" onClick={deleteItem} />
-  			</div>
-        {dialog}
+      <div>
+        <button text="Delete" onClick={deleteItem} />
+      </div>
+      {dialog}
     </div>
 )
 ```
