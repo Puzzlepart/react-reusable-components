@@ -11,7 +11,7 @@ export function useMessage(defaultDuration = 5000): [IUserMessageProps, (message
   const [state, setState] = useState<IUserMessageProps>(null)
 
 
-  const element = <UserMessage {...state} />
+  const element = state ? <UserMessage {...state} /> : null
 
   /**
    * Set message
