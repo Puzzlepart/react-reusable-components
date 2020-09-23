@@ -1,5 +1,6 @@
-import { IUserMessageProps } from './IUserMessageProps'
-import React,{useState} from 'react'
+import { IUserMessageProps } from './types'
+import React, { useState } from 'react'
+import { UserMessage } from '.'
 
 /**
  * Used to show a temporarily message
@@ -8,6 +9,9 @@ import React,{useState} from 'react'
  */
 export function useMessage(defaultDuration = 5000): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
   const [state, setState] = useState<IUserMessageProps>(null)
+
+
+  const element = <UserMessage {...state} />
 
   /**
    * Set message
@@ -20,5 +24,5 @@ export function useMessage(defaultDuration = 5000): [IUserMessageProps, (message
     window.setTimeout(() => setState(null), duration)
   }
 
-  return [state, set]
+  return [element, set]
 }

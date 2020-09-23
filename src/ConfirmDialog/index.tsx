@@ -1,41 +1,7 @@
 import { DefaultButton, PrimaryButton } from 'office-ui-fabric-react/lib/Button'
-import { Dialog, DialogFooter, DialogType, IDialogContentProps } from 'office-ui-fabric-react/lib/Dialog'
-import React, { useState } from 'react'
-import { IConfirmDialogProps, IUseConfirmationState } from './types'
-
-/**
- * Returns a JSX.Element and a function to get response (boolean) from the user through a dialog
- */
-export function useConfirmationDialog(): [JSX.Element, (props: IDialogContentProps) => Promise<boolean>] {
-    const [state, setState] = useState<IUseConfirmationState>({})
-
-    const reset = () => setState({ props: null, onResponse: null })
-
-    const dialog = (
-        <ConfirmDialog
-            {...state.props}
-            onResponse={state.onResponse} />
-    )
-
-    /**
-     * Get response from user in Dialog
-     * 
-     * @param {IDialogContentProps} props Dialog content props
-     */
-    function getResponse(props: IDialogContentProps) {
-        return new Promise<boolean>((resolve) => {
-            setState({
-                props,
-                onResponse: confirmed => {
-                    reset()
-                    resolve(confirmed)
-                }
-            })
-        })
-    }
-
-    return [dialog, getResponse]
-}
+import { Dialog, DialogFooter, DialogType } from 'office-ui-fabric-react/lib/Dialog'
+import React from 'react'
+import { IConfirmDialogProps } from './types'
 
 export const ConfirmDialog: React.FunctionComponent<IConfirmDialogProps> = ({ title, subText, onResponse }: IConfirmDialogProps) => {
     return (
@@ -55,3 +21,4 @@ export const ConfirmDialog: React.FunctionComponent<IConfirmDialogProps> = ({ ti
 }
 
 export * from './types'
+export * from './useConfirmationDialog'
