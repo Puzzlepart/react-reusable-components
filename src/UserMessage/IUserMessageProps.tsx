@@ -27,11 +27,6 @@ export interface IUserMessageProps extends IMessageBarProps {
     type?: MessageBarType;
 
     /**
-     * Icon to use if not default for the type
-     */
-    iconName?: string;
-
-    /**
      * Container style
      */
     containerStyle?: React.CSSProperties;

@@ -26,7 +26,10 @@ import { useConfirmationDialog } from 'react-reusable-components/lib/ConfirmDial
 const [dialog, getResponse] = useConfirmationDialog()
 
 async function deleteItem() {
-  let response = getResponse()
+  let response = getResponse({
+    title: 'Delete item',
+    subText: 'Are you sure you want to delete the item?'
+  })
   if(response) {
     // Delete item
   }
