@@ -1,6 +1,6 @@
 {
   "name": "pzl-react-reusable-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "lib/index.js",
   "engines": {
     "node": ">=0.10.0"
@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc --build",
     "watch": "tsc --watch",
-    "lint": "eslint --ext .ts,.tsx ./src --color --fix"
+    "lint": "eslint --ext .ts,.tsx ./src --color --fix",
+    "prepublish": "npm run lint && npm run build"
   },
   "dependencies": {
     "office-ui-fabric-react": "7.106.3",
