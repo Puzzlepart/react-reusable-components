@@ -3,7 +3,7 @@ import { Progress } from './index'
 import { IProgressProps } from './types'
 
 export function useProgress(): [JSX.Element, (label: string, description?: string) => void, () => void] {
-    const [state, setState] = useState<IProgressProps>({})
+    const [state, setState] = useState<IProgressProps>(null)
 
 
     const element = state ? <Progress {...state} /> : null

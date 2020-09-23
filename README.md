@@ -72,9 +72,42 @@ return (
         <button text="Delete" onClick={deleteItem} />
       </div>
       {dialog}
-      {message}
     </div>
 )
 ```
+
+### Progress
+
+Display progress to the user using the `ProgressIndicator` component from `office-ui-fabric-react`.
+
+#### Import
+
+Import in the following way:
+
+```typescript
+import { Progress } from 'react-reusable-components/lib/Progress'
+```
+
+#### Using the hook
+
+```JSX
+const [progress, startProgress, endProgress] = useProgress()
+
+async function deleteItem() {
+  startProgress('Deleting item', 'Please wait...')
+  ....
+  endProgress()
+}
+
+return (
+    <div>
+      <div>
+        <button text="Delete" onClick={deleteItem} />
+      </div>
+      {progress}
+    </div>
+)
+```
+
 
 
