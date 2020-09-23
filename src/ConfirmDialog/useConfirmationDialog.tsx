@@ -12,7 +12,7 @@ export function useConfirmationDialog(): [JSX.Element, (props: IDialogContentPro
 
     const reset = () => setState({ props: null, onResponse: null })
 
-    const element = (
+    const element = state.props && (
         <ConfirmDialog
             {...state.props}
             onResponse={state.onResponse} />
