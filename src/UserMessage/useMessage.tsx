@@ -6,12 +6,13 @@ import { UserMessage } from '.'
  * Used to show a temporarily message
  * 
  * @param {number} defaultDuration Default duration
+ * @param {IUserMessageProps} defaultProps Default props
  */
-export function useMessage(defaultDuration = 5000): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
+export function useMessage(defaultDuration = 5000, defaultProps: Partial<IUserMessageProps> = {}): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
   const [state, setState] = useState<IUserMessageProps>(null)
 
 
-  const element = state ? <UserMessage {...state} /> : null
+  const element = state ? <UserMessage {...{ ...defaultProps, ...state }} /> : null
 
   /**
    * Set message
