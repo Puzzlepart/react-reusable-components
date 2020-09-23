@@ -2,11 +2,16 @@ import React, { useState } from 'react'
 import { Progress } from './index'
 import { IProgressProps } from './types'
 
-export function useProgress(): [JSX.Element, (label: string, description?: string) => void, () => void] {
+/**
+ * Show progress
+ * 
+ * @param {IProgressProps} defaultProps Default props
+ */
+export function useProgress(defaultProps: IProgressProps = {}): [JSX.Element, (label: string, description?: string) => void, () => void] {
     const [state, setState] = useState<IProgressProps>(null)
 
-
-    const element = state ? <Progress {...state} /> : null
+    const props = { ...defaultProps, ...state }
+    const element = state ? <Progress {...props} /> : null
 
     /**
      * Start progress

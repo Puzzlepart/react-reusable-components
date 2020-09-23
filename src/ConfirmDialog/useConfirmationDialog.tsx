@@ -4,9 +4,8 @@ import { IUseConfirmationState } from './types'
 import { ConfirmDialog } from './index'
 
 /**
- * Returns a JSX.Element and a function to get response (boolean) from the user through a dialog
+ * Confirm action using a Dialog
  */
-
 export function useConfirmationDialog(): [JSX.Element, (props: IDialogContentProps) => Promise<boolean>] {
     const [state, setState] = useState<IUseConfirmationState>({})
 

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { UserMessage } from '.'
 
 /**
- * Used to show a temporarily message
+ * Show a temporarily message
  * 
  * @param {number} defaultDuration Default duration
  * @param {IUserMessageProps} defaultProps Default props
@@ -11,8 +11,8 @@ import { UserMessage } from '.'
 export function useMessage(defaultDuration = 5000, defaultProps: Partial<IUserMessageProps> = {}): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
   const [state, setState] = useState<IUserMessageProps>(null)
 
-
-  const element = state ? <UserMessage {...{ ...defaultProps, ...state }} /> : null
+  const props = { ...defaultProps, ...state }
+  const element = state ? <UserMessage {...props} /> : null
 
   /**
    * Set message
