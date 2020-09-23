@@ -1,6 +1,7 @@
 {
   "name": "pzl-react-reusable-components",
-  "version": "0.0.8",
+  "version": "0.0.9",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -24,5 +25,23 @@
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.19.0",
     "typescript": "~3.7.x"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Puzzlepart/react-reusable-components.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "office-ui-fabric"
+  ],
+  "author": "Puzzlepart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Puzzlepart/react-reusable-components/issues"
+  },
+  "homepage": "https://github.com/Puzzlepart/react-reusable-components#readme"
 }
