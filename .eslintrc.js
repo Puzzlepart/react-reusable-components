@@ -46,7 +46,9 @@ module.exports = {
 
         "require-await": 1,
 
-        "semi": ["error", "never", {}]
+        "semi": ["error", "never", {}],
+
+        "@typescript-eslint/no-inferrable-types": 0
     },
     settings: {
         react: {

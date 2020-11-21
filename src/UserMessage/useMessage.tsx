@@ -8,7 +8,7 @@ import { UserMessage } from '.'
  * @param {number} defaultDuration Default duration
  * @param {IUserMessageProps} defaultProps Default props
  */
-export function useMessage(defaultDuration = 5000, defaultProps: Partial<IUserMessageProps> = {}): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
+export function useMessage(defaultDuration: number = 5000, defaultProps: Partial<IUserMessageProps> = {}): [IUserMessageProps, (message: IUserMessageProps, duration?: number) => void] {
   const [state, setState] = useState<IUserMessageProps>(null)
 
   const props = { ...defaultProps, ...state }

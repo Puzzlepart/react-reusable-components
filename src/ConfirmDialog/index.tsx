@@ -1,9 +1,9 @@
 import { DefaultButton, PrimaryButton } from 'office-ui-fabric-react/lib/Button'
 import { Dialog, DialogFooter, DialogType } from 'office-ui-fabric-react/lib/Dialog'
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import { IConfirmDialogProps } from './types'
 
-export const ConfirmDialog: React.FunctionComponent<IConfirmDialogProps> = ({ title, subText, onResponse }: IConfirmDialogProps) => {
+export const ConfirmDialog: FunctionComponent<IConfirmDialogProps> = ({ title, subText, onResponse }: IConfirmDialogProps) => {
     return (
         <Dialog
             hidden={!onResponse}

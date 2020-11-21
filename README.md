@@ -1,4 +1,4 @@
-# React Reusable Components [![version](https://img.shields.io/badge/version-0.0.11-yellow.svg)](https://semver.org)
+# React Reusable Components [![version](https://img.shields.io/badge/version-0.1.0-green.svg)](https://semver.org)
 
 ## Installation
 
