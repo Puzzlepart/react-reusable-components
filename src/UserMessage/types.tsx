@@ -22,7 +22,7 @@ export interface IUserMessageProps extends IMessageBarProps {
     onDismiss?: () => void;
 
     /**
-     * Type (info, warning, erro etc)
+     * Type (info, warning, error etc)
      */
     type?: MessageBarType;
 

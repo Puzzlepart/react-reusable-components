@@ -109,5 +109,37 @@ return (
 )
 ```
 
+### Toast
+
+Display a temporarily message to the user using the `MessageBar` component from `office-ui-fabric-react`.
+
+#### Import
+
+Import in the following way:
+
+```typescript
+import { Toast } from 'pzl-react-reusable-components/lib/Toast'
+```
+
+#### Using the hook
+
+```JSX
+const [toast, setToast] = useToast(800)
+
+async function deleteItem() {
+  ....
+  toast("Item was successfully deleted.")
+}
+
+return (
+    <div>
+      <div>
+        <button text="Delete" onClick={deleteItem} />
+      </div>
+      {toast}
+    </div>
+)
+```
+
 
 
