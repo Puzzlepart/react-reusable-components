@@ -1,20 +1,28 @@
-import { DefaultButton, PrimaryButton } from '@fluentui/react'
-import { Dialog, DialogFooter, DialogType } from '@fluentui/react'
+import { DefaultButton, Dialog, DialogFooter, DialogType } from '@fluentui/react'
 import React, { FunctionComponent } from 'react'
 import { IConfirmDialogProps } from './types'
 
-export const ConfirmDialog: FunctionComponent<IConfirmDialogProps> = ({ title, subText, onResponse }: IConfirmDialogProps) => {
+export const ConfirmDialog: FunctionComponent<IConfirmDialogProps> = (props: IConfirmDialogProps) => {
     return (
         <Dialog
-            hidden={!onResponse}
+            hidden={!props.onResponse}
+            modalProps={{
+                isBlocking: true,
+                isDarkOverlay: false
+            }}
             dialogContentProps={{
                 type: DialogType.largeHeader,
-                title,
-                subText
+                title: props.title,
+                subText: props.subText
             }}>
             <DialogFooter>
-                <PrimaryButton text='Ja' onClick={() => onResponse(true)} />
-                <DefaultButton text='Avbryt' onClick={() => onResponse(false)} />
+                {props.responses.map(([text, value, primary], idx) => (
+                    <DefaultButton
+                        key={idx}
+                        primary={primary}
+                        text={text}
+                        onClick={() => props.onResponse(value)} />
+                ))}
             </DialogFooter>
         </Dialog>
     )
@@ -22,3 +30,4 @@ export const ConfirmDialog: FunctionComponent<IConfirmDialogProps> = ({ title, s
 
 export * from './types'
 export * from './useConfirmationDialog'
+

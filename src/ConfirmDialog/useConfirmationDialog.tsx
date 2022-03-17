@@ -1,12 +1,12 @@
-import { IDialogContentProps } from '@fluentui/react'
 import React, { useState } from 'react'
-import { IUseConfirmationState } from './types'
+import { IConfirmDialogProps, IUseConfirmationState } from './types'
 import { ConfirmDialog } from './index'
 
 /**
- * Confirm action using a Dialog
+ * Confirm action using a `Dialog` from `@fluentui/react`. Specify `Dialog` properties like `title` and `subText` along
+ * with a `responses` array and get back a JSX element with the dialog and a response callback function.
  */
-export function useConfirmationDialog(): [JSX.Element, (props: IDialogContentProps) => Promise<boolean>] {
+export function useConfirmationDialog(): [JSX.Element, (props: IConfirmDialogProps) => Promise<boolean | string>] {
     const [state, setState] = useState<IUseConfirmationState>({})
 
     const reset = () => setState({ props: null, onResponse: null })
@@ -22,13 +22,13 @@ export function useConfirmationDialog(): [JSX.Element, (props: IDialogContentPro
      *
      * @param {IDialogContentProps} props Dialog content props
      */
-    function getResponse(props: IDialogContentProps) {
-        return new Promise<boolean>((resolve) => {
+    function getResponse(props: IConfirmDialogProps) {
+        return new Promise<boolean | string>((resolve) => {
             setState({
                 props,
-                onResponse: confirmed => {
+                onResponse: value => {
                     reset()
-                    resolve(confirmed)
+                    resolve(value)
                 }
             })
         })
