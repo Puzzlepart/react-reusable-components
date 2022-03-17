@@ -1,6 +1,6 @@
 {
   "name": "pzl-react-reusable-components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "engines": {
     "node": ">=0.10.0"
@@ -11,20 +11,20 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "office-ui-fabric-react": "7.106.3",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
+    "@fluentui/react": "8.40.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-markdown": "4.3.1"
   },
   "devDependencies": {
     "@types/es6-promise": "0.0.33",
-    "@types/react": "16.8.8",
-    "@types/react-dom": "16.8.3",
+    "@types/react": "17.0.34",
+    "@types/react-dom": "17.0.11",
     "@typescript-eslint/eslint-plugin": "2.30.0",
     "@typescript-eslint/parser": "2.30.0",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.19.0",
-    "typescript": "~3.7.x"
+    "typescript": "4.2.3"
   },
   "directories": {
     "lib": "lib"
