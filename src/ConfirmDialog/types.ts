@@ -1,4 +1,4 @@
-import { IDialogContentProps } from 'office-ui-fabric-react/lib/Dialog'
+import { IDialogContentProps } from '@fluentui/react'
 
 export interface IUseConfirmationState {
     props?: IDialogContentProps;

@@ -1,4 +1,4 @@
-import { IDialogContentProps } from 'office-ui-fabric-react/lib/Dialog'
+import { IDialogContentProps } from '@fluentui/react'
 import React, { useState } from 'react'
 import { IUseConfirmationState } from './types'
 import { ConfirmDialog } from './index'

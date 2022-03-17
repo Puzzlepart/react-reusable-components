@@ -1,5 +1,5 @@
-import { DefaultButton, PrimaryButton } from 'office-ui-fabric-react/lib/Button'
-import { Dialog, DialogFooter, DialogType } from 'office-ui-fabric-react/lib/Dialog'
+import { DefaultButton, PrimaryButton } from '@fluentui/react'
+import { Dialog, DialogFooter, DialogType } from '@fluentui/react'
 import React, { FunctionComponent } from 'react'
 import { IConfirmDialogProps } from './types'
 

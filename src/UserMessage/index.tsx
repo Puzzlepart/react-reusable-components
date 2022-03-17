@@ -1,6 +1,6 @@
 
-import { IMessageBarStyleProps, IMessageBarStyles, MessageBar } from 'office-ui-fabric-react/lib/MessageBar'
-import { IStyleFunctionOrObject } from 'office-ui-fabric-react/lib/Utilities'
+import { IMessageBarStyleProps, IMessageBarStyles, MessageBar } from '@fluentui/react'
+import { IStyleFunctionOrObject } from '@fluentui/react'
 import React, { FunctionComponent } from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import { IUserMessageProps } from './types'

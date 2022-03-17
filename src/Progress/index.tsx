@@ -1,4 +1,4 @@
-import { ProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator'
+import { ProgressIndicator } from '@fluentui/react'
 import React, { FunctionComponent } from 'react'
 import { IProgressProps } from './types'
 
