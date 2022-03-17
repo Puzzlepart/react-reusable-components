@@ -21,7 +21,7 @@ export const ConfirmDialog: FunctionComponent<IConfirmDialogProps> = (props: ICo
                         key={idx}
                         primary={primary}
                         text={text}
-                        onClick={() => props.onResponse(value)} />
+                        onClick={() => props.onResponse(value ?? text)} />
                 ))}
             </DialogFooter>
         </Dialog>

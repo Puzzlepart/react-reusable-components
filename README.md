@@ -17,7 +17,7 @@ Dialog used to confirm actions. Also contains React hook `useConfirmationDialog`
 Import in the following way:
 
 ```typescript
-import { useConfirmationDialog } from 'react-reusable-components/lib/ConfirmDialog'
+import { useConfirmationDialog } from 'pzl-react-reusable-components/lib/ConfirmDialog'
 ```
 
 #### Using the hook
@@ -54,7 +54,7 @@ Display a message to the user. Uses a `MessageBar` from `office-ui-fabric-react`
 Import in the following way:
 
 ```typescript
-import { UserMessage } from 'react-reusable-components/lib/UserMessage'
+import { UserMessage } from 'pzl-react-reusable-components/lib/UserMessage'
 ```
 
 #### Using the hook
@@ -85,7 +85,7 @@ Display progress to the user using the `ProgressIndicator` component from `offic
 Import in the following way:
 
 ```typescript
-import { Progress } from 'react-reusable-components/lib/Progress'
+import { Progress } from 'pzl-react-reusable-components/lib/Progress'
 ```
 
 #### Using the hook

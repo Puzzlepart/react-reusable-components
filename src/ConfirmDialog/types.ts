@@ -1,6 +1,8 @@
 import { IDialogContentProps } from '@fluentui/react'
 
-export type ConfirmDialogResponse = [string, boolean | string, boolean?]
+export type ConfirmDialogResponseValue = boolean | string
+
+export type ConfirmDialogResponse = [string, ConfirmDialogResponseValue?, boolean?]
 
 export interface IUseConfirmationState {
     /**
@@ -12,7 +14,7 @@ export interface IUseConfirmationState {
      * On response callback is called when the user clicks one of the 
      * of the possible responses in the dialog.
      */
-    onResponse?: (responseValue: boolean | string) => void;
+    onResponse?: (responseValue: ConfirmDialogResponseValue) => void;
 }
 
 export interface IConfirmDialogProps extends IDialogContentProps {
@@ -20,7 +22,7 @@ export interface IConfirmDialogProps extends IDialogContentProps {
      * On response callback is called when the user clicks one of the 
      * of the possible responses in the dialog.
      */
-    onResponse?: (responseValue: boolean | string) => void;
+    onResponse?: (responseValue: ConfirmDialogResponseValue) => void;
 
     /**
      * Array of possible responses. Array of up to three properties.
