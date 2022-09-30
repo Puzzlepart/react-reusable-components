@@ -36,7 +36,7 @@ export const UserMessage: FunctionComponent<IUserMessageProps> = (props: IUserMe
                 onDismiss={props.onDismiss}
                 actions={props.actions}>
                 {props.text && (
-                    <ReactMarkdown source={props.text} escapeHtml={false} skipHtml={false} />
+                    <ReactMarkdown children={props.text} />
                 )}
                 {props.children && props.children}
             </MessageBar>
