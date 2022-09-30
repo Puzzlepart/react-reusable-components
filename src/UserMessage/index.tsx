@@ -2,7 +2,7 @@
 import { IMessageBarStyleProps, IMessageBarStyles, MessageBar } from '@fluentui/react'
 import { IStyleFunctionOrObject } from '@fluentui/react'
 import React, { FunctionComponent } from 'react'
-import ReactMarkdown from 'react-markdown/with-html'
+import ReactMarkdown from 'react-markdown'
 import { IUserMessageProps } from './types'
 
 /**
